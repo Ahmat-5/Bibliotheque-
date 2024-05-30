@@ -9,7 +9,7 @@ $email = $_POST['email'];
 $password = $_POST['password'];
 
 // Vérification si l'utilisateur est déjà enregistré
-$req = $bdd->prepare('SELECT id FROM enseignants WHERE email = :email');
+$req = $bdd->prepare('SELECT id FROM enseignants WHERE email = 'email');
 $req->execute(array('email' => $email));
 $resultat = $req->fetch();
 
